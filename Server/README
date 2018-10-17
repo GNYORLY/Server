@@ -1,0 +1,54 @@
+README
+
+Name: Jeannie Chiem
+ID: 504666652
+
+USER MANUAL
+
+To compile the program, simply use cd to go into the program directory 
+through the command line and then use the make command as shown. 
+
+$ make
+
+The makefile should then compile server.c and create the server executable 
+in the same directory.
+
+To use the server, make sure you are in the same directory as the server 
+executable and type a command in this format: ./server <portnumber>
+
+For example one valid command is this:
+
+$ ./server 3000
+
+Once this is done the server will do nothing but wait until a client 
+connects to it.
+
+To connect to the server using a web browser(e.g. firefox, chrome), 
+type a request in this format into the address bar:				
+http://<machinename>:<port>/<filename> 
+
+<machinename> is the name or IP address of the server machine 
+<port> is the port number that the server is using, <portnumber>
+<filename> is the name of the file you want from the server
+
+For example, when testing the server on the same machine, you can use:
+
+http://localhost:3000/hello.html
+
+If the filename requested exists on the same directory as the server 
+and is of one of the filetypes listed here (.jpeg, .jpg, .gif, .html, .htm), 
+the browser should show the file correctly on the screen. If the file 
+does not exist on the server directory, the browser should instead show 
+a 404 error page.
+
+Once you are finished using the program, you can use the make clean command 
+to remove all extraneous files created during compilation and return 
+the program to its original state as shown.
+
+$ make clean
+
+To make a distributable tarball of the program use make dist.
+
+$ make dist
+
+
